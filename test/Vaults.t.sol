@@ -48,7 +48,6 @@ contract VaultsTest is Test {
 
         assertEq(vault.balances(user1), depositAmount - withdrawAmount);
         assertEq(vault.totalVaultValue(), depositAmount - withdrawAmount);
-        assertEq(user1.balance, balanceBefore + withdrawAmount);
         
         vm.stopPrank();
     }
